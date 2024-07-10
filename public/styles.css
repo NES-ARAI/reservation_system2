@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button.reserve-btn.available {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button.reserve-btn.full {
+    background-color: #f44336;
+    color: white;
+}
+
+button.reserve-btn:hover {
+    background-color: #45a049;
+}
+
+button.reserve-btn:active {
+    transform: scale(0.95);
+  
+}
+
+/* デフォルトのスタイルを設定 */
+#admin-login {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* スマホ向けのスタイルを追加 */
+@media (max-width: 600px) {
+    #admin-login {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        top: auto;
+    }
+}
+
+/* スタイルの最初に追加 */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px; /* ここで全体の文字サイズを小さくします */
+    }
+    h1 {
+        font-size: 24px; /* タイトルの文字サイズを小さくします */
+    }
+    h2 {
+        font-size: 20px; /* サブタイトルの文字サイズを小さくします */
+    }
+    p, li, button {
+        font-size: 16px; /* 残りの文字サイズを調整します */
+    }
+}

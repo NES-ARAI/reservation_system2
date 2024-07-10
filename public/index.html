@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NES 講師面談予約システム</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>NES 講師面談予約システム</h1>
+   <button id="admin-login">管理者ログイン</button>
+    <div>
+        <h2>スケジュール一覧</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>日にち</th>
+                    <th>時間</th>
+                    <th>定員</th>
+                    <th>予約状況</th>
+                    <th>予約可否</th>
+                </tr>
+            </thead>
+            <tbody id="schedule-rows">
+                <!-- スケジュールがここに表示される -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

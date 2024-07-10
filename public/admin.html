@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理者画面</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="initAdmin()">
+    <h1>管理者画面</h1>
+    <div>
+        <h2>スケジュール登録</h2>
+        <form id="schedule-form">
+            <label for="date">日にち:</label>
+            <input type="date" id="date" name="date" required>
+            <label for="startTime">開始時間:</label>
+            <input type="time" id="startTime" name="startTime" required>
+            <label for="endTime">終了時間:</label>
+            <input type="time" id="endTime" name="endTime" required>
+            <label for="capacity">定員:</label>
+            <input type="number" id="capacity" name="capacity" required>
+            <button type="submit">登録</button>
+        </form>
+    </div>
+    <div>
+        <h2>スケジュール一覧</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>日にち</th>
+                    <th>時間</th>
+                    <th>定員</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody id="admin-schedule-rows">
+                <!-- スケジュールがここに表示される -->
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h2>予約者一覧</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>名前</th>
+                    <th>メールアドレス</th>
+                    <th>予約日</th>
+                    <th>開始時間</th>
+                    <th>終了時間</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody id="reservation-rows">
+                <!-- 予約がここに表示される -->
+            </tbody>
+        </table>
+        <button id="export-csv">CSVダウンロード</button>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
